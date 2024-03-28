@@ -591,6 +591,8 @@ func TestPathPrefixMatcher(t *testing.T) {
 				"https://example.com/css":          http.StatusOK,
 				"https://example.com/css/":         http.StatusOK,
 				"https://example.com/css/main.css": http.StatusOK,
+				"https://example.com/cssssss":      http.StatusOK,
+				"https://example.com/cssss/m.js":   http.StatusOK,
 			},
 		},
 	}

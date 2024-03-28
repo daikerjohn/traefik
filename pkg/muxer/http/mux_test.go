@@ -131,8 +131,9 @@ func TestMuxer(t *testing.T) {
 			desc: "Rule case CamelCase",
 			rule: `PathPrefix("/css")`,
 			expected: map[string]int{
-				"https://example.com/css": http.StatusOK,
-				"https://example.com/js":  http.StatusNotFound,
+				"https://example.com/css":     http.StatusOK,
+				"https://example.com/csssadf": http.StatusOK,
+				"https://example.com/js":      http.StatusNotFound,
 			},
 		},
 		{
